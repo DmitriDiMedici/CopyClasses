@@ -3,15 +3,15 @@ import shutil
 import pandas as pd
 
 #Initial config
-EXCEL_FILE = r"C:\Users\PC\Documents\Prueba\Prueba.xlsx"
-MASTER_DIR = r"C:\Users\PC\Documents\Prueba\Master"
-DESTINATION_DIR = r"C:\Users\PC\Documents\Prueba\Mantainance"
+EXCEL_FILE = r"" #Complete route tothe excel file, with it's name at the end
+MASTER_DIR = r"" #Complete route to the repo, checked out to master branch
+DESTINATION_DIR = r"" #Complete route to the destination folder
 
 #Functions
 def read_file(excel_file):
     """Reads the excel file with the classes list"""
     df = pd.read_excel(excel_file)
-    class_list = df['Classes'].tolist()
+    class_list = df['Class'].tolist()
     return class_list
 
 def create_destination_folder(dest_dir):
@@ -35,7 +35,7 @@ def copy_classes(master_dir, backup_dir, class_list):
 
             if os.path.exists(source_path):
                 shutil.copy(source_path, dest_path)
-                print(f"Copied {source_path} to {dest_path}")
+                print(f"Copied {path} to {dest_path}")
             else:
                 print(f"File not found: {source_path}")
 
