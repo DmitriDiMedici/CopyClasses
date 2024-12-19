@@ -3,7 +3,7 @@ import shutil
 import pandas as pd
 
 #Initial config
-EXCEL_FILE = "Prueba.xlsx"
+EXCEL_FILE = r"C:\Users\PC\Documents\Prueba\Prueba.xlsx"
 MASTER_DIR = r"C:\Users\PC\Documents\Prueba\Master"
 DESTINATION_DIR = r"C:\Users\PC\Documents\Prueba\Mantainance"
 
